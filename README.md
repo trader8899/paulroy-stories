@@ -21,12 +21,11 @@ When finished, delete the `.ph` rule near the top of `style.css`.
 6. Contact form: sign up free at formspree.io with Paul's email, create a form, and replace `YOUR_FORM_ID` in `contact.html`.
 7. Testimonials: a ready-made section is commented out in `index.html`. Switch it on once there are real quotes.
 
-## Putting it online with GitHub Pages
-1. Create a free account at github.com.
-2. Click **New repository**. Name it e.g. `paulroy-stories`, set it to **Public**, and create it.
-3. Click **uploading an existing file**, drag in everything from this folder (keep the `images` and `audio` folders), and click **Commit changes**.
-4. Go to **Settings > Pages**. Under "Build and deployment", choose **Deploy from a branch**, branch **main**, folder **/ (root)**, then **Save**.
-5. After a minute or two the site appears at `https://YOUR-USERNAME.github.io/paulroy-stories/`.
+## Hosting
+The live site is **https://lifestories.org.nz**, hosted on Cloudflare Pages (Roland's Cloudflare account).
 
-## Custom domain (optional)
-Buy a domain (e.g. from a NZ registrar), then in **Settings > Pages > Custom domain** enter it and follow GitHub's DNS instructions. Tick **Enforce HTTPS** once it's available.
+Every push to `main` deploys automatically through GitHub Actions (`.github/workflows/deploy.yml`). Check the **Actions** tab to see each deploy. To redeploy without changes, open the workflow there and click **Run workflow**.
+
+The workflow needs one repository secret, `CLOUDFLARE_API_TOKEN` (Settings > Secrets and variables > Actions). Roland supplies the token.
+
+Only the site files are published: `*.html`, `*.css`, `*.svg`, `*.xml`, `images/` and `audio/`. If you add a new top-level file type, add it to the "Collect site files" step in the workflow.
