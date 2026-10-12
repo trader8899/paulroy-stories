@@ -60,7 +60,7 @@ p { margin: 0 0 1em; }
   gap: .75rem 1.5rem; padding-top: 1.1rem; padding-bottom: 1.1rem; flex-wrap: wrap;
 }
 .brand { font-family: var(--serif); font-size: 1.35rem; color: var(--walnut); text-decoration: none; line-height: 1.2; }
-.brand small { display: block; font-family: var(--sans); font-size: .8rem; color: var(--gum); }
+.brand small { display: block; font-family: var(--sans); font-size: 1.05rem; font-weight: 600; color: var(--gum); }
 .nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; list-style: none; margin: 0; padding: 0; font-size: .98rem; }
 .nav a { color: var(--walnut); text-decoration: none; }
 .nav a:hover, .nav a[aria-current="page"] { text-decoration: underline; }
