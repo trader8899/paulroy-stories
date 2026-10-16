@@ -174,8 +174,9 @@ textarea { min-height: 10rem; resize: vertical; }
 }
 @media (max-width: 600px) {
   .section { padding: 3.5rem 0; }
-  .hero { padding-top: 2.75rem; }
-  .hero-photo { max-height: none; aspect-ratio: 4 / 3; object-position: 40% center; }
+  /* On phones the desk photo comes first, to catch the eye */
+  .hero { padding-top: 0; display: flex; flex-direction: column; }
+  .hero-photo { order: -1; max-height: none; height: auto; margin-bottom: 2.25rem; }
   .steps { grid-template-columns: 1fr; }
   .episode { grid-template-columns: 5.5rem 1fr; gap: 1rem; }
   .episode img { width: 5.5rem; height: 5.5rem; }
